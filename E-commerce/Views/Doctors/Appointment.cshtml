@@ -1,0 +1,20 @@
+﻿@model E_commerce.Models.Doctor
+
+<div class="container mt-4">
+    <h1>Book an Appointment with @Model.Name</h1>
+    <form action="/Doctors/SubmitAppointment" method="post">
+        <div class="mb-3">
+            <label for="name" class="form-label">Your Name</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+        </div>
+        <div class="mb-3">
+            <label for="age" class="form-label">Your Age</label>
+            <input type="number" class="form-control" id="age" name="age" required>
+        </div>
+        <div class="mb-3">
+            <label for="appointmentDate" class="form-label">Appointment Date</label>
+            <input type="date" class="form-control" id="appointmentDate" name="appointmentDate" required>
+        </div>
+        <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+</div>

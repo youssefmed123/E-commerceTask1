@@ -1,0 +1,22 @@
+﻿@model List<E_commerce.Models.Doctor>
+
+<div class="container">
+    <h1>Our Doctors</h1>
+    <div class="row">
+        @foreach (var doctor in Model)
+        {
+            <div class="col-4">
+                <div class="card" style="height: 100%">
+                    <div style="height:100%">
+                        <img src="~/images/@doctor.Img" class="card-img-top" height="80%" alt="...">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">@doctor.Name</h5>
+                        <p class="card-text">@doctor.Specialization</p>
+                        <a href="@Url.Action("Appointment", "Doctors", new { doctorId = doctor.Id })" class="btn btn-primary">Book Appointment</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
